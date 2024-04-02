@@ -1,0 +1,35 @@
+body {
+    color: white;
+    background-color: mediumpurple;
+    font-family: "Europa";
+    font-size:2em ;
+}
+
+.Intro {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.Intro div {
+    font-size: 1.5em;
+    padding: 20px;
+    margin:10px;
+}
+
+.right {
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+button {
+    font-family: "Europa";
+    color: mediumpurple;
+    font-size: 1.3em;
+    border-radius: 5px 5px;
+    background-color: white;
+    padding: 10px;
+}
+
