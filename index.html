@@ -3,49 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Speak Ease </title>
-    <link rel="stylesheet" href="css/index.css">
+    <title>Categories</title>
+    <link rel="stylesheet"  href="css/index.css">
+    <script src="JS/script.js"></script>
 </head>
 <body>
-
-<header>
-    <nav>
-        <div class="left">
-            <!--insert logo -->
-
-        </div>
-
-        <div class="right">
-            <a href="#myaccount">My Account</a>
-            <a href="#help">Help</a>
-
-        </div>
-    </nav>
-</header>
-
-
-<main>
-
-<section class = "Intro">
-    <div>
-        <h1>Welkom</h1>
-    </div>
-
-    <div>
-        <button type="button"> Start </button>
-    </div>
-</section>
-
-
-
-</main>
-
-
-
-
-
-
+<div class="container">
+    <div class="category boxed" onclick="fetchCategoryData('Feelings')">Ik voel</div>
+    <div class="category boxed" onclick="fetchCategoryData('Needs')">Ik wil</div>
+    <div class="category boxed" onclick="fetchCategoryData('Belongings')">Ik heb</div>
+    <div class="category boxed" onclick="fetchCategoryData('IdentityStatements')">Ik ben</div>
+</div>
+<div id="items" class="items"></div> <!-- Items container -->
+<div id="sentence" class="sentence"></div> <!-- Sentence container -->
 
 
 </body>
 </html>
+
