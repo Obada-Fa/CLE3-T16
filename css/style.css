@@ -67,8 +67,21 @@ button:hover {
 }
 
 .sentence {
+    position: relative; /* Allows absolute positioning of children */
+    background-color: white;
+    color: black;
+    padding: 10px;
+    padding-right: 40px; /* Give extra padding to not overlap the icon */
+    border-radius: 10px;
+    text-align: center;
     margin-top: 20px;
-    width: 100%; /* Ensure the sentence stretches to the width of its container */
+    cursor: pointer; /* Indicates the entire sentence is clickable */
     display: flex;
-    justify-content: center; /* Center sentence text */
+    justify-content: space-between;
+    align-items: center;
+}
+
+#speakIcon {
+    cursor: pointer;
+    margin-left: auto; /* Pushes the icon to the far right */
 }
