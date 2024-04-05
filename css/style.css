@@ -1,0 +1,74 @@
+body {
+    font-family: "Europa", sans-serif;
+    font-size: 1em;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column; /* Stack content vertically */
+    align-items: center; /* Center content horizontally */
+    justify-content: center; /* Center content vertically */
+    height: 100vh; /* Full height of the viewport */
+    color: white;
+    background-color: mediumpurple;
+}
+
+/* Styling for buttons, if used for categories */
+button {
+    font-size: 1.3em;
+    padding: 10px;
+    color: mediumpurple;
+    background-color: white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #e6e6e6;
+}
+
+/* Common styles applied to boxed items and sentences */
+ .boxed,.item, .sentence {
+    padding: 20px;
+    color: #542da8;
+    background-color: white;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for depth */
+}
+
+.boxed:hover, .item:hover {
+    background-color: #f0f0f0;
+}
+
+/* Container styles */
+.container {
+    display: flex;
+    flex-direction: row;
+    width: 80%; /* Adjust based on preference */
+    max-width: 960px; /* Maximum width to ensure content is not too stretched */
+    margin-bottom: 20px;
+}
+
+/* Specific styles for the items slider */
+#items {
+    overflow-x: auto;
+    display: flex;
+    gap: 10px;
+    padding: 20px 0;
+    white-space: nowrap;
+}
+
+.boxed,.item {
+    min-width: 120px;
+    margin: 0 5px; /* Space on the sides of each item */
+}
+
+.sentence {
+    margin-top: 20px;
+    width: 100%; /* Ensure the sentence stretches to the width of its container */
+    display: flex;
+    justify-content: center; /* Center sentence text */
+}

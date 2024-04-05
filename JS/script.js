@@ -1,6 +1,5 @@
 // Declare a variable to store the current category
 let currentCategory = '';
-
 function fetchCategoryData(category) {
     currentCategory = category; // Update the current category
 
@@ -21,17 +20,20 @@ function fetchCategoryData(category) {
             // Update the sentence with the correct Dutch phrase
             sentenceContainer.textContent = `Ik ${categoryMap[category]} `;
 
-            // Clear previous items and show the container
+            // Clear previous items and prepare for the slider
             itemsContainer.innerHTML = '';
-            itemsContainer.style.display = 'grid';
+            itemsContainer.style.display = 'flex'; // Use 'flex' for horizontal layout
+            itemsContainer.style.overflowX = 'auto'; // Enable horizontal scrolling
+            itemsContainer.style.flexWrap = 'nowrap'; // Prevent wrapping
 
-            // Populate items
+            // Populate slider items
             data.data.forEach(item => {
                 const div = document.createElement('div');
                 div.className = 'item';
+                div.style.minWidth = '120px'; // Ensure items have a minimum width
                 div.textContent = item.OptionalDescription;
                 div.onclick = function() {
-                    // Replace the last part of the sentence with the clicked item
+                    // Update the sentence with the clicked item
                     sentenceContainer.textContent = `Ik ${categoryMap[currentCategory]} ${this.textContent} `;
                 };
                 itemsContainer.appendChild(div);

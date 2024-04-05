@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Categories</title>
-    <link rel="stylesheet"  href="css/index.css">
+    <link rel="stylesheet"  href="css/style.css">
     <script src="JS/script.js"></script>
 </head>
 <body>
@@ -14,9 +14,12 @@
     <div class="category boxed" onclick="fetchCategoryData('Belongings')">Ik heb</div>
     <div class="category boxed" onclick="fetchCategoryData('IdentityStatements')">Ik ben</div>
 </div>
-<div id="items" class="items"></div> <!-- Items container -->
-<div id="sentence" class="sentence"></div> <!-- Sentence container -->
-
+<div class="container items-slider" id="items">
+    <!-- Items will be dynamically inserted here -->
+</div>
+<div id="sentence" class="sentence">
+    <!-- The dynamically built sentence will appear here -->
+</div>
 
 </body>
 </html>
