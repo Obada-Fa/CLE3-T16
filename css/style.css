@@ -67,18 +67,11 @@ button:hover {
 }
 
 .sentence {
-    position: relative; /* Allows absolute positioning of children */
-    background-color: white;
-    color: black;
-    padding: 10px;
-    padding-right: 40px; /* Give extra padding to not overlap the icon */
-    border-radius: 10px;
-    text-align: center;
-    margin-top: 20px;
-    cursor: pointer; /* Indicates the entire sentence is clickable */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+    display: flex; /* Use flex display for better control over item alignment */
+    justify-content: space-between; /* Space content and speaker icon */
+    align-items: center; /* Center items vertically */
+    padding-right: 10px; /* Ensure some space at the end */
+    min-height: 50px; /* Give a minimum height to the container */
 }
 
 #speakIcon {
