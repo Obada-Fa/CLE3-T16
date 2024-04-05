@@ -1,5 +1,3 @@
-// Declare a variable to store the current category
-let currentCategory = '';
 function fetchCategoryData(category) {
     currentCategory = category; // Update the current category
 
@@ -22,20 +20,34 @@ function fetchCategoryData(category) {
 
             // Clear previous items and prepare for the slider
             itemsContainer.innerHTML = '';
-            itemsContainer.style.display = 'flex'; // Use 'flex' for horizontal layout
-            itemsContainer.style.overflowX = 'auto'; // Enable horizontal scrolling
-            itemsContainer.style.flexWrap = 'nowrap'; // Prevent wrapping
+            itemsContainer.style.display = 'flex';
+            itemsContainer.style.overflowX = 'auto';
+            itemsContainer.style.flexWrap = 'nowrap';
 
             // Populate slider items
             data.data.forEach(item => {
+                // Create the container for each item
                 const div = document.createElement('div');
                 div.className = 'item';
-                div.style.minWidth = '120px'; // Ensure items have a minimum width
-                div.textContent = item.OptionalDescription;
+                div.style.minWidth = '120px';
+
+                // Create and append the emoji span
+                const emojiSpan = document.createElement('span');
+                emojiSpan.textContent = item.Emoji;
+                emojiSpan.style.marginRight = '10px';
+                div.appendChild(emojiSpan);
+
+                // Create and append the description text
+                const textSpan = document.createElement('span');
+                textSpan.textContent = item.Description;
+                div.appendChild(textSpan);
+
+                // Add click event to update the sentence
                 div.onclick = function() {
-                    // Update the sentence with the clicked item
-                    sentenceContainer.textContent = `Ik ${categoryMap[currentCategory]} ${this.textContent} `;
+                    sentenceContainer.textContent = `Ik ${categoryMap[currentCategory]} ${item.Description} ${item.Emoji}`;
                 };
+
+                // Append the item to the items container
                 itemsContainer.appendChild(div);
             });
         })
