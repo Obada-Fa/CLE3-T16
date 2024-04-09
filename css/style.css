@@ -9,8 +9,53 @@ body {
     justify-content: center; /* Center content vertically */
     height: 100vh; /* Full height of the viewport */
     color: white;
-    background-color: mediumpurple;
+    background-color: #ae9bff;
 }
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10vh;
+    padding: 0 10px;
+    background-color: #5d4b73
+; /* Dark background for contrast */
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Add shadow for depth */
+}
+
+img{
+    width: 100%;
+    max-height: 100px;
+}
+
+.navbar-right a {
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    padding-right: 30px;
+    transition: color 0.3s;
+}
+
+.navbar-right a:hover {
+    color: #ddd; /* Lighter color on hover */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+
+    .navbar-right {
+        margin-top: 10px;
+    }
+}
+
 
 /* Styling for buttons, if used for categories */
 button {
