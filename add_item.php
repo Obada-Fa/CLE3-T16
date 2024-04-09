@@ -54,7 +54,8 @@ $categoryMap = [
     <meta charset="UTF-8">
     <title>Add New Item</title>
     <link rel="stylesheet" href="css/style.css">
-    <script type="module" src="https://unpkg.com/picmo"></script>
+    <link rel="stylesheet" href="https://unpkg.com/picmo/dist/themes/light/picmo.min.css">
+    <script src="https://unpkg.com/picmo"></script>
     <script src="JS/script.js" defer></script>
 
 </head>
@@ -84,3 +85,4 @@ $categoryMap = [
 </form>
 </body>
 </html>
+
